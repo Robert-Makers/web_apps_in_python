@@ -11,6 +11,6 @@ class Book:
     def __eq__(self, other):
         return self.__dict__ == other.__dict__
 
-    # This method makes it look nicer when we print an Artist
+    # This method makes it look nicer when we print a Book
     def __repr__(self):
         return f"Book({self.id}, {self.title}, {self.author_name})"
