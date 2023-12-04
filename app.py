@@ -41,8 +41,18 @@ def goodbye():
 def submit():
     name = request.form['name']
     message = request.form['message']
-    
+
     return f"Thanks {name}, you sent this message: {message}"
+
+# phase 02.02 challenge
+# GET /wave
+# parameters: name
+# returns: I am waving at {name}
+@app.route('/wave', methods=['GET'])
+def wave():
+    name = request.args['name']
+
+    return f"I am waving at {name}"
 
 # This imports some more example routes for you to see how they work
 # You can delete these lines if you don't need them.
