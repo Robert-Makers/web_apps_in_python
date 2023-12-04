@@ -33,6 +33,17 @@ def goodbye():
     # Send back a fond farewell with the name
     return f"Goodbye {name}!"
 
+# phase 02.02 exercise
+# POST /submit
+# parameters: name + message
+# Returns Thanks {name}, you sent this message: {message}
+@app.route('/submit', methods=['POST'])
+def submit():
+    name = request.form['name']
+    message = request.form['message']
+    
+    return f"Thanks {name}, you sent this message: {message}"
+
 # This imports some more example routes for you to see how they work
 # You can delete these lines if you don't need them.
 from example_routes import apply_example_routes
